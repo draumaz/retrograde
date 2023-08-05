@@ -8,10 +8,10 @@ HOMEPAGE="https://github.com/hykilpikonna/hyfetch"
 SRC_URI="https://github.com/hykilpikonna/hyfetch/archive/refs/tags/1.4.9.tar.gz"
 
 KEYWORDS="~amd64 ~arm64 x86"
-
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
-IUSE=""
+
+BDEPEND="dev-lang/python"
 
 src_compile() {
   python3 ./setup.py build
@@ -22,7 +22,3 @@ src_install() {
   install -Dm 644 hyfetch/scripts/autocomplete.bash "${D}"/usr/share/bash-completion/completions/hyfetch
   install -Dm 644 hyfetch/scripts/autocomplete.zsh "${D}"/usr/share/zsh/site-functions/hyfetch
 }
-
-DEPEND=""
-RDEPEND="${DEPEND}"
-BDEPEND=""
