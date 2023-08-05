@@ -11,14 +11,6 @@ KEYWORDS="~amd64 ~arm64 x86"
 LICENSE="GPL-3"
 SLOT="0"
 
-BDEPEND="dev-lang/python"
+PYTHON_COMPAT=(python3_{10..12})
 
-src_compile() {
-  python3 ./setup.py build
-}
-
-src_install() {
-  python3 ./setup.py install --root="${D}" --optimize=1 --skip-build
-  install -Dm 644 ${PN}/scripts/autocomplete.bash "${D}"/usr/share/bash-completion/completions/${PN}
-  install -Dm 644 ${PN}/scripts/autocomplete.zsh "${D}"/usr/share/zsh/site-functions/${PN}
-}
+inherit distutils-r1
