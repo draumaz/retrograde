@@ -19,6 +19,6 @@ src_compile() {
 
 src_install() {
   python3 ./setup.py install --root="${D}" --optimize=1 --skip-build
-  install -Dm 644 hyfetch/scripts/autocomplete.bash "${D}"/usr/share/bash-completion/completions/hyfetch
-  install -Dm 644 hyfetch/scripts/autocomplete.zsh "${D}"/usr/share/zsh/site-functions/hyfetch
+  install -Dm 644 ${PN}/scripts/autocomplete.bash "${D}"/usr/share/bash-completion/completions/${PN}
+  install -Dm 644 ${PN}/scripts/autocomplete.zsh "${D}"/usr/share/zsh/site-functions/${PN}
 }
