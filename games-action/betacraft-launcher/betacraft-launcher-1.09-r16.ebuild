@@ -25,7 +25,5 @@ src_compile() {
 }
 
 src_install() {
-  mkdir -p "${D}/usr/{bin,share/BetaCraft-Launcher}"
-  cp build/libs/BetaCraft-Launcher-Java.jar "${D}/usr/share/BetaCraft-Launcher/BetaCraft-Launcher-Java.jar"
-  cp "${FILESDIR}/betacraft-launcher" "${D}/usr/bin/"
+  dobin "build/libs/BetaCraft-Launcher-Java.jar"
 }
