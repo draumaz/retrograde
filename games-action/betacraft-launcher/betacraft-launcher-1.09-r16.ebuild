@@ -9,6 +9,8 @@ SRC_URI="https://github.com/betacraftuk/betacraft-launcher/archive/refs/tags/1.0
 
 S="${WORKDIR}/betacraft-launcher-1.09_16"
 
+DEPEND="dev-java/gradle-bin virtual/jdk"
+
 KEYWORDS="~amd64"
 LICENSE="GPL-3"
 SLOT="0"
