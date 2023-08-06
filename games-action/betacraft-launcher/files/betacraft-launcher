@@ -1,0 +1,3 @@
+#/bin/sh
+
+java -jar /usr/share/BetaCraft-Launcher/BetaCraft-Launcher-Java.jar
