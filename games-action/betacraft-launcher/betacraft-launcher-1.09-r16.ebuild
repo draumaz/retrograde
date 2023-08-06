@@ -18,6 +18,7 @@ src_prepare() {
   sed -i 's/sourceCompatibility = 5/sourceCompatibility = 7/g' build.gradle
   sed -i 's/compile fileTree/implementation fileTree/g' build.gradle
   cp -vf "${FILESDIR}/betacraft-launcher.sh" "${WORKDIR}/betacraft-launcher"
+  cp -vf "${FILESDIR}/uk.betacraft.betacraftlauncher.desktop" "${WORKDIR}/"
   chmod -v +x "${WORKDIR}/betacraft-launcher"
   eapply_user
 }
@@ -28,7 +29,9 @@ src_compile() {
 
 src_install() {
   mkdir -pv "${D}/usr/bin"
+  mkdir -pv "${D}/usr/share/applications"
   mkdir -pv "${D}/usr/share/betacraft"
-  cp -vf "build/libs/BetaCraft-Launcher-Java.jar" "${D}/usr/share/betacraft"
+  cp -vf "build/libs/BetaCraft-Launcher-Java.jar" "${D}/usr/share/betacraft/"
   cp -vf "${WORKDIR}/betacraft-launcher" "${D}/usr/bin/"
+  cp -vf "${WORKDIR}/uk.betacraft.betacraftlauncher.desktop" "${D}/usr/share/applications/"
 }

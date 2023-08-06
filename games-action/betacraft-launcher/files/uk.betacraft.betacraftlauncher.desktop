@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.09.16
+Name=Betacraft Launcher
+Comment=A launcher for Minecraft focused on legacy versions of the game
+Type=Application
+Terminal=false
+Exec=betacraft-launcher
+StartupNotify=true
+Icon=org.prismlauncher.PrismLauncher
+Categories=Game;ActionGame;AdventureGame;Simulation;
+Keywords=game;minecraft;mc;
+StartupWMClass=BetacraftLauncher
+MimeType=application/zip;application/x-modrinth-modpack+zip
