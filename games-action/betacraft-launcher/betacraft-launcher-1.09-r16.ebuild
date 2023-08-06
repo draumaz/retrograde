@@ -17,7 +17,8 @@ src_prepare() {
   sed -i 's/targetCompatibility = 5/targetCompatibility = 7/g' build.gradle
   sed -i 's/sourceCompatibility = 5/sourceCompatibility = 7/g' build.gradle
   sed -i 's/compile fileTree/implementation fileTree/g' build.gradle
-  cp -vf "${FILESDIR}/betacraft-launcher" "${WORKDIR}/"
+  cp -vf "${FILESDIR}/betacraft-launcher.sh" "${WORKDIR}/betacraft-launcher"
+  chmod -v +x "${WORKDIR}/betacraft-launcher"
   eapply_user
 }
 
