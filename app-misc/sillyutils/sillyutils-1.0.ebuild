@@ -11,8 +11,24 @@ KEYWORDS="~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv 
 LICENSE="GPL-3"
 SLOT="0"
 
+src_prepare() {
+  default
+  mkdir bin
+  for LINK in `cat sillyutils.sh | \
+    tr ' ' '\n' | \
+    grep '()' | \
+    tr '()' '\n' | \
+    grep '[Aa-zZ]'`; do
+      cat > bin/${LINK} << EOF
+#!/bin/sh -e
+sillyutils ${i} \${@}
+EOF
+      chmod +x "bin/${LINK}"
+  done
+  mv sillyutils.sh sillyutils
+}
+
 src_install() {
-  dobin "${PN}.sh"
-  dodoc "${PN}.1"
-  einstalldocs
+  dobin "${PN}" bin/*
+  doman "${PN}.1"
 }
