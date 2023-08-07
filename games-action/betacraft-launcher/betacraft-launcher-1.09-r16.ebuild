@@ -42,5 +42,5 @@ src_install() {
   cp -vf "build/libs/BetaCraft-Launcher-Java.jar" "${D}/usr/share/betacraft/"
   cp -vf "${WORKDIR}/betacraft-launcher" "${D}/usr/bin/"
   cp -vf "${WORKDIR}/uk.betacraft.betacraftlauncher.desktop" "${D}/usr/share/applications/"
-  cp -vf "${S}/src/main/resources/icons/icon.png" "${D}/usr/share/icons/hicolor/256x256/apps/uk.betacraft.betacraftlauncher"
+  cp -vf "${S}/src/main/resources/icons/icon.png" "${D}/usr/share/icons/hicolor/256x256/apps/uk.betacraft.betacraftlauncher.png"
 }
