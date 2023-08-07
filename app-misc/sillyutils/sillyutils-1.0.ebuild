@@ -21,7 +21,7 @@ src_prepare() {
     grep '[Aa-zZ]'`; do
       cat > bin/${LINK} << EOF
 #!/bin/sh -e
-sillyutils ${i} \${@}
+sillyutils ${LINK} \${@}
 EOF
       chmod +x "bin/${LINK}"
   done
