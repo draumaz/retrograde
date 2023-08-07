@@ -16,5 +16,5 @@ LICENSE="GPL-3"
 SLOT="0"
 
 src_install() {
-  tar -xpf "${S}/data.tar.xz" -C "${D}"
+  tar -xpvf "${S}/data.tar.xz" -C "${D}"
 }
