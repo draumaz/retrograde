@@ -8,7 +8,7 @@ HOMEPAGE="https://github.com/draumaz/linkie"
 SRC_URI="https://github.com/draumaz/linkie/archive/refs/tags/1.0.tar.gz"
 
 KEYWORDS="~amd64 ~arm64 x86"
-LICENSE="MIT"
+LICENSE="GPL-3"
 SLOT="0"
 
 src_install() {
