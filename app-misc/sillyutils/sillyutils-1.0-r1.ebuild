@@ -15,7 +15,7 @@ SLOT="0"
 
 src_prepare() {
   default
-  mkdir bin
+  mkdir -v bin
   for LINK in `cat sillyutils.sh | \
     tr ' ' '\n' | \
     grep '()' | \
@@ -25,9 +25,9 @@ src_prepare() {
 #!/bin/sh -e
 sillyutils ${LINK} \${@}
 EOF
-      chmod +x "bin/${LINK}"
+      chmod -v +x "bin/${LINK}"
   done
-  mv sillyutils.sh sillyutils
+  mv -v sillyutils.sh sillyutils
 }
 
 src_install() {
