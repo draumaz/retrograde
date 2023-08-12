@@ -17,12 +17,13 @@ src_prepare() {
   default
   mkdir -v bin
   mv -v sillyutils.sh bin/sillyutils
+  chmod -v +x bin/sillyutils
   cd bin
   for LINK in `cat sillyutils | \
     tr ' ' '\n' | \
     grep '()' | \
     tr '()' '\n' | \
-    grep '[Aa-zZ]'`; do ln -sv sillyutils "${LINK}"
+    grep '[Aa-zZ]'`; do ln -sv sillyutils ${LINK}
   done
 }
 
