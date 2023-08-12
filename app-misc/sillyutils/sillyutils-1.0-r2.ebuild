@@ -17,7 +17,8 @@ src_prepare() {
   default
   mkdir -v bin
   mv -v sillyutils.sh bin/sillyutils
-  for LINK in `cat sillyutils.sh | \
+  cd bin
+  for LINK in `cat sillyutils | \
     tr ' ' '\n' | \
     grep '()' | \
     tr '()' '\n' | \
@@ -26,6 +27,6 @@ src_prepare() {
 }
 
 src_install() {
-  dobin "${PN}" bin/*
+  dobin bin/*
   doman "${PN}.1"
 }
