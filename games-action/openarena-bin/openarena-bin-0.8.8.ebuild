@@ -1,7 +1,8 @@
 # Copyright 1999-2023 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-# Adapted from Mark Vainomaa's PKGBUILD.
+# Adapted from Mark Vainomaa's PKGBUILD
+# https://aur.archlinux.org/cgit/aur.git/tree/PKGBUILD?h=openarena
 
 EAPI=8
 
