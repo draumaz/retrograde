@@ -3,7 +3,7 @@
 
 EAPI=8
 
-DESCRIPTION="a symlink manager for files inside of ~/.config."
+DESCRIPTION="symlink everything from $LINKIE_REPO into $LINKIE_PATH."
 HOMEPAGE="https://github.com/draumaz/linkie"
 SRC_URI="https://github.com/draumaz/linkie/archive/refs/tags/1.1.tar.gz"
 
