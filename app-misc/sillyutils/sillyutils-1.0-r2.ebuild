@@ -16,18 +16,21 @@ SLOT="0"
 src_prepare() {
   default
   mkdir -v bin
-  mv -v sillyutils.sh bin/sillyutils
-  chmod -v +x bin/sillyutils
+  mv -v sillyutils.sh sillyutils
+  chmod -v +x sillyutils
   cd bin
-  for LINK in `cat sillyutils | \
+  for LINK in `cat ../sillyutils | \
     tr ' ' '\n' | \
     grep '()' | \
     tr '()' '\n' | \
-    grep '[Aa-zZ]'`; do ln -sv sillyutils ${LINK}
+    grep '[Aa-zZ]'`; do
+      ln -sv sillyutils "${LINK}"
   done
 }
 
 src_install() {
-  dobin bin/*
+  dobin "${PN}"
   doman "${PN}.1"
+  insinto "/usr/bin"
+  doins bin/* 
 }
