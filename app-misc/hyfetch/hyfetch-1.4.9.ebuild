@@ -7,7 +7,7 @@ PYTHON_COMPAT=(python3_{10..12})
 
 DESCRIPTION="Neofetch with LGBTQ+ pride flags!"
 HOMEPAGE="https://github.com/hykilpikonna/hyfetch"
-SRC_URI="https://github.com/hykilpikonna/hyfetch/archive/refs/tags/1.4.9.tar.gz"
+SRC_URI="https://github.com/hykilpikonna/hyfetch/archive/refs/tags/${PV}.tar.gz"
 
 KEYWORDS="~amd64 ~arm64 x86"
 LICENSE="MIT"
