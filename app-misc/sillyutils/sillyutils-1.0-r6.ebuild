@@ -21,6 +21,6 @@ src_prepare() {
 src_install() {
   insinto "/usr/bin"
   dobin bin/sillyutils
-  doman doc/*.1
+  find doc/ -name "*.1" | xargs doman
   find bin/ -type l | xargs doins
 }
