@@ -16,6 +16,7 @@ SLOT="0"
 src_prepare() {
   default
   tools/distrib.sh
+  chmod +x bin/sillyutils
 }
 
 src_install() {
