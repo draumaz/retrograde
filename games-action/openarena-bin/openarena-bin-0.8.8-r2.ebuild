@@ -43,7 +43,7 @@ src_install() {
   install -Dm 644 "${FILESDIR}/openarena.desktop" "${D}/usr/share/applications/"
   install -Dm 644 "${FILESDIR}/openarena-server.desktop" "${D}/usr/share/applications/"
 
-  doman "${FILESDIR}/openarena.6"
+  doman ${FILESDIR}/*.6
 
   install -Dm 755 "${FILESDIR}/openarena-runner.sh" "${D}/opt/openarena/openarena-runner.sh"
 
