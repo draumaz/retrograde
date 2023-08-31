@@ -1,1 +1,104 @@
-openarena.6
+.TH OPENARENA-SERVER "15" "October 2010" "openarena-server 0.8.8-r2" "Games"
+
+.SH NAME
+openarena-server - OpenArena dedicated server
+
+.SH SYNOPSIS
+openarena [\fI\,-h|--help\/\fR] [\fI\,-q|--quiet\/\fR] [\fI\,+set option value\/\fR]...
+
+.SH DESCRIPTION
+openarena-server is the dedicated server for the first-person shooter OpenArena.
+.PP
+openarena is the client for the first-person shooter OpenArena.
+
+.SH OPTIONS
+The wrapper script used for OpenArena in Debian accepts these options:
+.TP
+\fB\/-h, --help\fR
+Display a short help summary
+.TP
+\fB\/-q, --quiet\fR <num>
+Disable all output
+.PP
+Any console command can also be prefixed with + and used as a command-line option (run the server in a terminal to use the console). The +set command is generally the most useful to use on the command line.
+.PP
+Options that can be set with +set (note that this is not a full list!) include:
+.PP
+capturelimit <value>
+.PP
+dedicated <bool>
+.PP
+fraglimit <value>
+.PP
+fs_basepath <string>
+.PP
+fs_game <value>
+.PP
+g_allowVote <bool>
+.PP
+g_banIPs <IP address>
+.PP
+g_doWarmup <bool>
+.PP
+g_friendlyFire <bool>
+.PP
+g_gametype <bool>
+.PP
+g_gravity <value>
+.PP
+g_inactivity <value>
+.PP
+g_maxGameClients <value>
+.PP
+g_motd <string>
+.PP
+g_needpass <bool>
+.PP
+g_password <string>
+.PP
+g_quadfactor <value>
+.PP
+g_weaponrespawn <value>
+.PP
+net_ip <IP adress>
+.PP
+net_port <value>
+.PP
+net_qport <value>
+.PP
+nextmap <string>
+.PP
+sv_allowDownload <bool>
+.PP
+sv_floodProtect <bool>
+.PP
+sv_fps <value>
+.PP
+sv_hostname <string>
+.PP
+sv_maxclients <value>
+.PP
+sv_maxPing <value> (Measurd in milliseconds)
+.PP
+sv_minPing <value> (Measurd in milliseconds)
+.PP
+sv_pure <bool>
+.PP
+timelimit <value> (Measured in minutes)
+
+.SH ENVIRONMENT
+The wrapper script used to launch OpenArena allows it to be debugged by setting environment variables.
+.TP
+OPENARENA_DEBUGGER=command
+A debugger or other prefix to prepend to the OpenArena command line, such as strace; overridden by OPENARENA_BACKTRACE
+.TP
+OPENARENA_BACKTRACE=1
+Use \fB\/gdb(1)\fR to get a backtrace if OpenArena crashes (the gdb package must be installed for this to work)
+
+.SH SEE ALSO
+\fB\/openarena\fR(6),\ /usr/share/doc/openarena-0.8.8-r2
+
+.SH AUTHOR
+OpenArena was written by the OpenArena Team. The engine used is a modified ioQuake3, originally created by id Software and now maintained by the ioQuake3 community.
+.PP
+This manual page was written by Bruno "Fuddl" Kleinert <fuddl@debian.org> and Simon McVittie <smcv@debian.org>, for the Debian project (but may be used by others).
