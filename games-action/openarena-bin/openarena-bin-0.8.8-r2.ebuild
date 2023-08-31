@@ -26,10 +26,13 @@ src_prepare() {
 }
 
 src_install() {
-  mkdir -pv "${D}/opt" "${D}/usr/share/pixmaps" "${D}/usr/share/applications" "${D}/usr/share/doc/openarena-0.8.8" "${D}/usr/bin"
+  mkdir -pv "${D}/opt" "${D}/usr/share/pixmaps" "${D}/usr/share/applications" "${D}/usr/bin"
 
   mv -v "${S}" "${D}/opt/openarena"
-  cp -v CHANGES COPYING CREDITS LINUXNOTES README WENEED "${D}/usr/share/doc/openarena-0.8.8/"
+  if use doc; then
+    mkdir -pv "${D}/usr/share/doc/openarena-0.8.8"
+    cp -v CHANGES COPYING CREDITS LINUXNOTES README WENEED "${D}/usr/share/doc/openarena-0.8.8/"
+  fi
 
   find "${D}/opt/openarena" -type f -exec chmod 644 {} \;
   find "${D}/opt/openarena" -type d -exec chmod 755 {} \;
