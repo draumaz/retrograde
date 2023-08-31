@@ -16,17 +16,17 @@ LICENSE="GPL-3"
 SLOT="0"
 
 src_prepare() {
-  # patch build.gradle syntax to allow modern gradle-bin to parse
-  sed -i 's/targetCompatibility = 5/targetCompatibility = 7/g' build.gradle
-  sed -i 's/sourceCompatibility = 5/sourceCompatibility = 7/g' build.gradle
-  sed -i 's/compile fileTree/implementation fileTree/g' build.gradle
-
+  default
+  for SUBST in \
+    's/targetCompatibility = 5/targetCompatibility = 7/g' \
+    's/sourceCompatibility = 5/sourceCompatibility = 7/g' \
+    's/compile fileTree/implementation fileTree/g'; do
+      sed -i "${SUBST}" build.gradle
+  done
   cp -vf "${FILESDIR}/betacraft-launcher.sh" "${WORKDIR}/betacraft-launcher"
   cp -vf "${FILESDIR}/uk.betacraft.betacraftlauncher.desktop" "${WORKDIR}/uk.betacraft.betacraftlauncher.desktop"
   chmod -v +x "${WORKDIR}/betacraft-launcher"
   ls ${WORKDIR}
-
-  eapply_user
 }
 
 src_compile() {
@@ -34,11 +34,10 @@ src_compile() {
 }
 
 src_install() {
-  #TODO replace these with install -dm755 shenanigans
-  mkdir -pv "${D}/usr/bin"
-  mkdir -pv "${D}/usr/share/applications"
-  mkdir -pv "${D}/usr/share/icons/hicolor/256x256/apps"
-  mkdir -pv "${D}/usr/share/betacraft"
+  for DIR in "${D}/usr/bin" "${D}/usr/share/applications" \
+    "${D}/usr/share/icons/hicolor/256x256/apps" "${D}/usr/share/betacraft"; do
+      mkdir -pv "${DIR}"
+  done
   cp -vf "build/libs/BetaCraft-Launcher-Java.jar" "${D}/usr/share/betacraft/"
   cp -vf "${WORKDIR}/betacraft-launcher" "${D}/usr/bin/"
   cp -vf "${WORKDIR}/uk.betacraft.betacraftlauncher.desktop" "${D}/usr/share/applications/"
