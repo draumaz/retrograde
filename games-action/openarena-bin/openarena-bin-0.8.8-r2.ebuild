@@ -30,8 +30,7 @@ src_install() {
 
   mv -v "${S}" "${D}/opt/openarena"
   if use doc; then
-    mkdir -pv "${D}/usr/share/doc/openarena-0.8.8"
-    cp -v CHANGES COPYING CREDITS LINUXNOTES README WENEED "${D}/usr/share/doc/openarena-0.8.8/"
+    dodoc CHANGES COPYING CREDITS LINUXNOTES README WENEED
   fi
 
   find "${D}/opt/openarena" -type f -exec chmod 644 {} \;
