@@ -29,6 +29,7 @@ src_install() {
   mkdir -pv "${D}/opt" "${D}/usr/share/pixmaps" "${D}/usr/share/applications" "${D}/usr/bin"
 
   mv -v "${S}" "${D}/opt/openarena"
+
   if use doc; then
     dodoc CHANGES COPYING CREDITS LINUXNOTES README WENEED
   fi
