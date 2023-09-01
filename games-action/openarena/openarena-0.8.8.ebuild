@@ -20,12 +20,6 @@ KEYWORDS="~amd64"
 LICENSE="GPL"
 SLOT="0"
 
-src_prepare() {
-  default
-  cd "${OA_BINDIR}"
-  rm -rfv *.dll *.exe *.app __MACOSX
-}
-
 src_compile() {
   cd "${OA_SRCDIR}/engine/openarena-engine-source-0.8.8"
   emake
