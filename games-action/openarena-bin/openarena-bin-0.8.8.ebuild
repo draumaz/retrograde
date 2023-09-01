@@ -31,10 +31,10 @@ src_install() {
   find "${D}/opt/openarena" -type d -exec chmod 755 {} \;
   chmod 755 ${D}/opt/openarena/*.i386 ${D}/opt/openarena/*.x86_64
 
-  install -Dm 644 "${FILESDIR}/openarena.png" "${D}/usr/share/pixmaps/"
-  install -Dm 644 "${FILESDIR}/openarena-server.png" "${D}/usr/share/pixmaps/"
-  install -Dm 644 "${FILESDIR}/openarena.desktop" "${D}/usr/share/applications/"
-  install -Dm 644 "${FILESDIR}/openarena-server.desktop" "${D}/usr/share/applications/"
+  install -Dm 644 "${FILESDIR}/img/openarena.png" "${D}/usr/share/pixmaps/"
+  install -Dm 644 "${FILESDIR}/img/openarena-server.png" "${D}/usr/share/pixmaps/"
+  install -Dm 644 "${FILESDIR}/desktop/openarena.desktop" "${D}/usr/share/applications/"
+  install -Dm 644 "${FILESDIR}/desktop/openarena-server.desktop" "${D}/usr/share/applications/"
 
   install -Dm 755 "${FILESDIR}/openarena-runner.sh" "${D}/opt/openarena/openarena-runner.sh"
   ln -s "/opt/openarena/openarena-runner.sh" "${D}/usr/bin/openarena"
