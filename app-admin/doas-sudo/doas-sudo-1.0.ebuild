@@ -13,11 +13,11 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 src_compile() {
-  ln -s sudo doas
+  ln -s doas sudo
 }
 
 src_install() {
   insinto "/usr/bin"
-  doins doas
+  doins sudo
 }
 
