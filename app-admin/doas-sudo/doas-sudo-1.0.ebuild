@@ -8,7 +8,7 @@ HOMEPAGE="https://github.com/Duncaen/OpenDoas"
 
 S="${WORKDIR}"
 
-LICENSE=""
+LICENSE="ISC"
 SLOT="0"
 KEYWORDS="~amd64"
 
