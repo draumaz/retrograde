@@ -3,8 +3,8 @@
 
 EAPI=8
 
-DESCRIPTION=""
-HOMEPAGE=""
+DESCRIPTION="a symlink, doas -> sudo"
+HOMEPAGE="https://github.com/Duncaen/OpenDoas"
 
 S="${WORKDIR}"
 
