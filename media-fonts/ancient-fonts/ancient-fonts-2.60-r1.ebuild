@@ -7,7 +7,7 @@ inherit font
 
 DESCRIPTION="Unicode Fonts for Ancient Scripts"
 HOMEPAGE="https://dn-works.com/ufas"
-SRC_URI="https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/ttf-ancient-fonts/2.60-1.1/ttf-ancient-fonts_2.60.orig.tar.xz"
+SRC_URI="https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/ttf-ancient-fonts/${PV}-1.1/ttf-ancient-fonts_${PV}.orig.tar.xz"
 
 FONT_SUFFIX="otf ttf"
 
