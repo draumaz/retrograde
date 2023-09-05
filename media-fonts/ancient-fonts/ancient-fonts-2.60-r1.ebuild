@@ -6,7 +6,7 @@ EAPI=8
 inherit font
 
 DESCRIPTION="Unicode Fonts for Ancient Scripts"
-HOMEPAGE="http://users.teilar.gr/~g1951d/"
+HOMEPAGE="https://dn-works.com/ufas"
 SRC_URI="https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/ttf-ancient-fonts/2.60-1.1/ttf-ancient-fonts_2.60.orig.tar.xz"
 
 FONT_SUFFIX="otf ttf"
