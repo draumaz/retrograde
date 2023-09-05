@@ -3,7 +3,7 @@
 
 EAPI=8
 
-DESCRIPTION="sillyutils."
+DESCRIPTION="like coreutils but extremely silly"
 HOMEPAGE="https://github.com/draumaz/sillyutils"
 SRC_URI="https://github.com/draumaz/sillyutils/archive/refs/tags/${PVR}.tar.gz"
 
