@@ -13,12 +13,12 @@ SLOT="0"
 
 IUSE="gnome"
 
-src_prepare() {
+src_compile() {
   default
   if use gnome; then
     mv -v "./g${PN}.sh" "./g${PN}"
-	chmod -v +x "./glinkie"
-	ln -sv ${PN}.1 g${PN}.1
+	mv -v "./${PN}.1" "./g${PN}.1"
+	chmod -v +x "./g${PN}"
   else
     mv -v "./${PN}.sh" "./${PN}"
 	chmod -v +x "./${PN}"
