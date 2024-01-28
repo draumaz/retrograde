@@ -14,7 +14,7 @@ SRC_URI="https://github.com/libpinyin/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="boost lua opencc"
+IUSE="boost cloudpinyin lua opencc"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}
 	lua? ( ${LUA_REQUIRED_USE} )"
 
@@ -43,6 +43,10 @@ pkg_setup() {
 	if use lua; then
 		lua-single_pkg_setup
 	fi
+	
+	if use cloudpinyin; then
+	  cloud_input="--enable-cloud-input-mode"
+	fi
 }
 
 src_prepare() {
@@ -56,7 +60,7 @@ src_prepare() {
 src_configure() {
 	econf \
 		--enable-english-input-mode \
-		--enable-cloud-input-mode \
+		${cloud_input} \
 		$(use_enable boost) \
 		$(use_enable lua lua-extension) \
 		$(use_enable opencc)
