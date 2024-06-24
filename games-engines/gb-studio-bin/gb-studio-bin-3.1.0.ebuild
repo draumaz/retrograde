@@ -12,7 +12,7 @@ SRC_URI="https://github.com/chrismaltby/gb-studio/releases/download/v3.1.0/gb-st
 S="${WORKDIR}"
 
 KEYWORDS="~amd64"
-LICENSE="GPL-3"
+LICENSE="MIT"
 SLOT="0"
 
 src_install() {
