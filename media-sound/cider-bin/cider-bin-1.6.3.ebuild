@@ -3,7 +3,7 @@
 
 EAPI=8
 
-DESCRIPTION=""
+DESCRIPTION="A new cross-platform Apple Music experience based on Electron and Vue.js written from scratch with performance in mind"
 HOMEPAGE="https://cider.sh"
 SRC_URI="https://github.com/ciderapp/Cider/releases/download/v1.6.3/cider_${PVR}_amd64.deb"
 
