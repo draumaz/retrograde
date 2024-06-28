@@ -8,6 +8,8 @@ HOMEPAGE="https://github.com/Duncaen/OpenDoas"
 
 S="${WORKDIR}"
 
+DEPENDS="app-admin/doas !app-admin/sudo"
+
 LICENSE="ISC"
 SLOT="0"
 KEYWORDS="~amd64"
