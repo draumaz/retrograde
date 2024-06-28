@@ -6,7 +6,7 @@ EAPI=8
 DESCRIPTION="a symlink, neofetch -> neowofetch"
 HOMEPAGE="https://github.com/hykilpikonna/hyfetch"
 
-DEPEND="app-misc/hyfetch !!app-misc/neofetch"
+DEPEND="app-misc/hyfetch !app-misc/neofetch"
 
 S="${WORKDIR}"
 
