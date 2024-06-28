@@ -11,7 +11,7 @@ DEPEND="app-misc/hyfetch !!app-misc/neofetch"
 S="${WORKDIR}"
 
 LICENSE="ISC"
-KEYWORD="~amd64"
+KEYWORDS="~amd64"
 SLOT="0"
 
 src_compile() {
