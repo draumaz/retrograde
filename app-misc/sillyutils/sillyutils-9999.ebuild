@@ -38,7 +38,7 @@ src_prepare() {
 src_install() {
   cd build
   insinto "/usr/bin"
-  dobin bin/sillyutils
+  dobin -r bin
   find man/ -name "*.1" | xargs doman
   find bin/ -type l | xargs doins
 }
