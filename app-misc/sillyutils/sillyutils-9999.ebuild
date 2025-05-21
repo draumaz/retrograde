@@ -19,6 +19,8 @@ RESTRICT=""
 EGIT_REPO_URI="https://github.com/draumaz/sillyutils.git"
 EGIT_BRANCH="main"
 
+SLOT="0"
+
 # The S variable defines the source directory after git-r3.eclass clones the repo.
 # By default, git-r3 will clone into ${WORKDIR}/${PN}, but since the repo name
 # is 'retrograde', we'll explicitly set S to match the cloned directory.
