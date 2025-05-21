@@ -13,15 +13,15 @@ KEYWORDS="~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv 
 LICENSE="GPL-3"
 SLOT="0"
 
+# Runtime dependencies
+RDEPEND="app-shells/bash"
+
 src_prepare() {
   default
   distrib/make_distrib
 }
 
 src_install() {
-  cd build
   insinto "/usr/bin"
-  dobin bin/sillyutils
-  find man/ -name "*.1" | xargs doman
-  find bin/ -type l | xargs doins
+  find build/bin/ -type f | xargs dobin
 }
