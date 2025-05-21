@@ -16,7 +16,7 @@ HOMEPAGE="https://github.com/draumaz/retrograde"
 RESTRICT=""
 
 # Define the Git repository and branch
-EGIT_REPO_URI="https://github.com/draumaz/retrograde.git"
+EGIT_REPO_URI="https://github.com/draumaz/sillyutils.git"
 EGIT_BRANCH="main"
 
 # The S variable defines the source directory after git-r3.eclass clones the repo.
