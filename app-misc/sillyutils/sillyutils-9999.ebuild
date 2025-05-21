@@ -31,9 +31,15 @@ RDEPEND="
 	app-shells/bash
 "
 
+src_prepare() {
+  default
+  distrib/make_distrib
+}
+
 src_install() {
-	# Install the sillyutils.sh script from the cloned repository
-	# The script is located at the root of the 'retrograde' repository.
-	insinto /usr/bin
-	doins "${S}/sillyutils.sh"
+  cd build
+  insinto "/usr/bin"
+  dobin bin/sillyutils
+  find man/ -name "*.1" | xargs doman
+  find bin/ -type l | xargs doins
 }
